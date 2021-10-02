@@ -47,6 +47,11 @@
    font-weight: 600;
    font-family: "Poppins", sans-serif;
    color: $primary;
+
+   &:hover {
+      color: $primary;
+      text-decoration: none;
+   }
 }
 
 header {
@@ -54,21 +59,22 @@ header {
    width: 100%;
    position: relative;
    .navbar {
-      height: 70px;
-      a {
-         text-decoration: none;
-      }
-      .navbar-nav {
+      height: 80px;
+      ul.navbar-nav {
          li.nav-item {
-            a {
+            &.active {
                a.nav-link {
-                  color: $gray-900;
-                  padding-left: 1rem;
-                  padding-right: 1rem;
-
-                  &:hover {
-                     // text-decoration: underline;
-                  }
+                  color: $primary;
+               }
+            }
+            
+            a.nav-link {
+               color: $gray-900;
+               font-weight: 600;
+               padding: 0 1rem;
+               letter-spacing: .1px;
+               &:hover {
+                  text-decoration: underline;
                }
             }
          }
